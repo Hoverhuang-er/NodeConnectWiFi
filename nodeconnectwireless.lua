@@ -1,7 +1,5 @@
--- Wemos Relay.lua
--- John Longworth December 2016
--- For use with WeMos single relay shield
-
+-- Relay.lua
+-- For use with NodeMCU or GAgent MCU Model within 8 Channel Relay Module
 local SSID = "cts retail"      -- Enter your SSID
 local pwd  = "changi123!"      -- Enter your password
 
@@ -47,6 +45,48 @@ srv:listen(80,function(conn)
         elseif(_GET.pin == "OFF1")then
             gpio.write(pin, gpio.LOW);
         end
+         local _on,_off = "",""
+        if(_GET.pin == "ON2")then
+            gpio.write(pin, gpio.HIGH);
+        elseif(_GET.pin == "OFF2")then
+            gpio.write(pin, gpio.LOW);
+        end
+         local _on,_off = "",""
+        if(_GET.pin == "ON3")then
+            gpio.write(pin, gpio.HIGH);
+        elseif(_GET.pin == "OFF3")then
+            gpio.write(pin, gpio.LOW);
+        end
+         local _on,_off = "",""
+        if(_GET.pin == "ON4")then
+            gpio.write(pin, gpio.HIGH);
+        elseif(_GET.pin == "OFF4")then
+            gpio.write(pin, gpio.LOW);
+        end
+         local _on,_off = "",""
+        if(_GET.pin == "ON5")then
+            gpio.write(pin, gpio.HIGH);
+        elseif(_GET.pin == "OFF5")then
+            gpio.write(pin, gpio.LOW);
+        end
+         local _on,_off = "",""
+        if(_GET.pin == "ON6")then
+            gpio.write(pin, gpio.HIGH);
+        elseif(_GET.pin == "OFF6")then
+            gpio.write(pin, gpio.LOW);
+        end
+         local _on,_off = "",""
+        if(_GET.pin == "ON7")then
+            gpio.write(pin, gpio.HIGH);
+        elseif(_GET.pin == "OFF7")then
+            gpio.write(pin, gpio.LOW);
+        end
+         local _on,_off = "",""
+        if(_GET.pin == "ON8")then
+            gpio.write(pin, gpio.HIGH);
+        elseif(_GET.pin == "OFF8")then
+            gpio.write(pin, gpio.LOW);
+        end                
         client:send(buf)
         client:close()
     end)
